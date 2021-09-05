@@ -1,0 +1,312 @@
+home-cards-component > .cards > home-card-component {
+  flex-shrink: 0;
+
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 800px;
+  height: 420px;
+
+  border-radius: 10px;
+
+  background-color: rgba(22, 26, 29, 0.9);
+
+  user-select: none;
+
+  overflow: visible;
+
+  box-shadow: 0 20px 16px -10px rgba(0, 0, 0, 0.35);
+}
+
+home-cards-component > .cards > home-card-component:not(:last-child) {
+  margin-right: 50px;
+}
+
+home-cards-component > .cards > home-card-component > .image-wrapper {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+
+  display: inline-block;
+  width: 35%;
+  height: 420px;
+
+  background-color: rgb(255, 255, 255);
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  box-shadow: 0 8px 5px 5px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+
+  transform-origin: bottom;
+  transition: 0.3s;
+}
+
+home-cards-component > .cards > home-card-component > .image-wrapper:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+home-cards-component > .cards > home-card-component > .content-wrapper {
+  position: absolute;
+  top: 0;
+  right: 30px;
+
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+home-cards-component > .cards > home-card-component > .content-wrapper > .top {
+  flex-basis: 20%;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .title {
+  max-height: 32px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-bottom: 10px;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .title
+  > span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .title
+  > span:hover {
+  color: #f75857;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .rating {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .rating
+  > .stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .top
+  > .rating
+  > .vote {
+  display: flex;
+  align-items: center;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  letter-spacing: 1px;
+
+  color: #b7b8bc;
+}
+
+home-cards-component > .cards > home-card-component > .content-wrapper > .mid {
+  box-sizing: border-box;
+  flex-basis: 35%;
+
+  margin: 20px 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.375rem;
+  letter-spacing: 1px;
+
+  color: #95969a;
+
+  text-align: justify;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .mid::-webkit-scrollbar-track,
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .mid::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom {
+  box-sizing: border-box;
+  flex-basis: 45%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .ribbon {
+  flex-basis: 50%;
+
+  border-top: 1px solid #2c3033;
+  border-bottom: 1px solid #2c3033;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .ribbon
+  > div {
+  flex-grow: 1;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .ribbon
+  > div {
+  display: flex;
+  flex-direction: column;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .ribbon
+  > div
+  > span {
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #95969a;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .ribbon
+  > div
+  > span:first-child {
+  font-weight: bold;
+  color: #b7b8bc;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .action-buttons {
+  flex-basis: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-top: 15px;
+}
+
+home-cards-component
+  > .cards
+  > home-card-component
+  > .content-wrapper
+  > .bottom
+  > .action-buttons
+  > .play-button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+  color: #fff;
+
+  background-color: #f75857;
+
+  box-sizing: border-box;
+  width: 50%;
+  padding: 15px 0;
+
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5px;
+}

@@ -1,0 +1,44 @@
+pagination-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+pagination-component > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  text-align: center;
+
+  border-radius: 50%;
+
+  background-color: #e0e6ff;
+  color: #f75857;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+pagination-component > span.disabled {
+  padding: 0 30px;
+  border-radius: 15px;
+  user-select: none;
+}
+
+pagination-component > span:not(.disabled) {
+  cursor: pointer;
+}
+
+pagination-component > span:not(.disabled):hover,
+pagination-component > span.active {
+  background-color: #f75857;
+  color: #fff;
+}

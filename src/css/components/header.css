@@ -1,0 +1,58 @@
+header-component {
+  position: sticky;
+  top: 0;
+
+  z-index: 99998;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 32px 100px;
+
+  transition: 0.3s;
+}
+
+header-component.sticky {
+  box-shadow: 100vw 0px 100vw 0px rgba(0, 0, 0, 0.8) inset;
+}
+
+header-component #nav-brand {
+  display: flex;
+  column-gap: 5px;
+
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+header-component #nav-brand > span {
+  display: flex;
+  align-items: center;
+}
+
+header-component > #nav-brand > .primary {
+  color: #f75857;
+}
+
+header-component > button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 20px;
+
+  padding: 8px 32px;
+
+  letter-spacing: 1px;
+
+  box-sizing: border-box;
+
+  transition: 0.3s;
+}
+
+header-component > button:hover,
+header-component.sticky > button {
+  border: 1px solid #f75857;
+  background-color: #f75857;
+}

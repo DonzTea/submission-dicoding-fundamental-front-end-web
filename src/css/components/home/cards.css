@@ -1,0 +1,9 @@
+home-cards-component > .cards {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 60px 100px 150px;
+}
+
+home-cards-component > .cards::-webkit-scrollbar {
+  display: none;
+}

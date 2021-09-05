@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <background></background>
+    <trailer-component></trailer-component>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+          height: '390',
+          width: '640',
+          playerVars: {
+            playsinline: 1,
+          },
+          events: {
+            onReady,
+            onStateChange,
+          },
+        });
+      }
+
+      const onClickBody = () => {
+        player.stopVideo();
+      };
+
+      function onReady(e) {
+        document.body.addEventListener('click', onClickBody);
+      }
+
+      function onStateChange(e) {
+        // e.data === 1; // played
+        // e.data === 2; // paused
+        // e.data === 0; // stopped
+
+        if (e.data === 0) {
+          document.body.removeEventListener('click', onClickBody);
+        }
+      }
+    </script>
+  </body>
+</html>
