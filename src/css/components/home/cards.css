@@ -7,3 +7,9 @@ home-cards-component > .cards {
 home-cards-component > .cards::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 540px) {
+  home-cards-component > .cards {
+    padding: 60px 30px 50px;
+}
+}

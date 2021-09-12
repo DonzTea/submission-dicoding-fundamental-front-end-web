@@ -34,3 +34,9 @@ home-page {
 
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
 }
+
+@media screen and (max-width: 540px) {
+  .card-title {
+    padding: 80px 30px 40px;
+  }
+}

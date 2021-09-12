@@ -1,30 +1,33 @@
-export function getPagination(_current, _last) {
-  let current = parseInt(_current),
-    last = parseInt(_last),
-    delta = 2,
-    left = current - delta,
-    right = current + delta + 1,
-    range = [],
-    rangeWithDots = [],
-    l;
+export default {
+  getPagination: (_current, _last) => {
+    const current = parseInt(_current, 10);
+    const last = parseInt(_last, 10);
+    const delta = 2;
+    const left = current - delta;
+    const right = current + delta + 1;
+    const range = [];
+    const rangeWithDots = [];
+    let l;
 
-  for (let i = 1; i <= last; i++) {
-    if (i == 1 || i == last || (i >= left && i < right)) {
-      range.push(i);
-    }
-  }
-
-  for (let i of range) {
-    if (l) {
-      if (i - l === 2) {
-        rangeWithDots.push(l + 1);
-      } else if (i - l !== 1) {
-        rangeWithDots.push('...');
+    for (let i = 1; i <= last; i += 1) {
+      if (i === 1 || i === last || (i >= left && i < right)) {
+        range.push(i);
       }
     }
-    rangeWithDots.push(i);
-    l = i;
-  }
 
-  return rangeWithDots;
-}
+    for (let i = 0; i < range.length; i += 1) {
+      const number = range[i];
+      if (l) {
+        if (number - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (number - l !== 1) {
+          rangeWithDots.push("...");
+        }
+      }
+      rangeWithDots.push(number);
+      l = number;
+    }
+
+    return rangeWithDots;
+  },
+};

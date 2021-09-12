@@ -1,2 +1,4 @@
-export const formatNumberWithThousandSeparator = (number) =>
-  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+export default {
+  formatNumberWithThousandSeparator: (number) =>
+    number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+};

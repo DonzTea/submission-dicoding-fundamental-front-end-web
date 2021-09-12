@@ -77,3 +77,9 @@ discover-page .card-list {
 
   margin-bottom: 75px;
 }
+
+@media screen and (max-width: 540px) {
+  discover-page {
+    padding: 100px 30px;
+  }
+}

@@ -5,8 +5,11 @@ header-component {
   z-index: 99998;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  row-gap: 20px;
 
   padding: 32px 100px;
 
@@ -17,7 +20,7 @@ header-component.sticky {
   box-shadow: 100vw 0px 100vw 0px rgba(0, 0, 0, 0.8) inset;
 }
 
-header-component #nav-brand {
+header-component > #nav-brand {
   display: flex;
   column-gap: 5px;
 
@@ -28,7 +31,7 @@ header-component #nav-brand {
   cursor: pointer;
 }
 
-header-component #nav-brand > span {
+header-component > #nav-brand > span {
   display: flex;
   align-items: center;
 }
@@ -41,6 +44,8 @@ header-component > button {
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 20px;
+
+  text-align: center;
 
   padding: 8px 32px;
 
@@ -55,4 +60,23 @@ header-component > button:hover,
 header-component.sticky > button {
   border: 1px solid #f75857;
   background-color: #f75857;
+}
+
+@media screen and (max-width: 540px) {
+  header-component {
+    justify-content: center;
+  }
+
+  header-component > #nav-brand {
+    justify-content: center;
+  }
+
+  header-component > #nav-brand,
+  header-component > button {
+    flex-basis: 100%;
+  }
+
+  header-component > button {
+    max-width: 200px;
+  }
 }
