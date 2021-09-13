@@ -1,3 +1,5 @@
+import "./cards.css";
+
 import moment from "moment";
 
 import Scroll from "../../utils/scroll";
@@ -135,3 +137,5 @@ export default class Cards extends HTMLElement {
     window.removeEventListener("scroll", this.onWindowScroll);
   }
 }
+
+customElements.define("home-cards-component", Cards);

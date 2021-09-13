@@ -1,6 +1,8 @@
-import starIcon from "../../../img/star.svg";
-import starOutlinedIcon from "../../../img/star-outlined.svg";
-import playIcon from "../../../img/play-icon.svg";
+import "./card.css";
+
+import starIcon from "../../img/star.svg";
+import starOutlinedIcon from "../../img/star-outlined.svg";
+import playIcon from "../../img/play-icon.svg";
 import Trailer from "../trailer";
 import { getYoutubeTrailerKey } from "../../services/fetch";
 import { setActivePage, setDetailPageAttribute } from "../../utils/route";
@@ -175,3 +177,5 @@ export default class Card extends HTMLElement {
     this.titleElement.firstChild.removeEventListener("click", this.openDetail);
   }
 }
+
+customElements.define("home-card-component", Card);

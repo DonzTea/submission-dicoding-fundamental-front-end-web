@@ -1,3 +1,5 @@
+import "./header.css";
+
 export default class Header extends HTMLElement {
   constructor() {
     super();
@@ -58,3 +60,5 @@ export default class Header extends HTMLElement {
     this.buttonDiscover.removeEventListener("click", this.discover);
   }
 }
+
+customElements.define("header-component", Header);

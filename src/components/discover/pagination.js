@@ -1,3 +1,5 @@
+import "./pagination.css";
+
 import PaginationUtils from "../../utils/pagination";
 
 export default class Pagination extends HTMLElement {
@@ -69,3 +71,5 @@ export default class Pagination extends HTMLElement {
     }
   }
 }
+
+customElements.define("pagination-component", Pagination);

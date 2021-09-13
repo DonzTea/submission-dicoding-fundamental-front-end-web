@@ -1,4 +1,15 @@
-import "./config";
+import "./styles/main.css";
+
+import "./components/header";
+import "./components/trailer";
+import "./components/home/cards";
+import "./components/home/card";
+import "./components/discover/card";
+import "./components/discover/pagination";
+
+import "./pages/home";
+import "./pages/detail";
+import "./pages/discover";
 
 class Root extends HTMLElement {
   constructor() {

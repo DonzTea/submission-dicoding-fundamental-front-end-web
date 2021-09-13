@@ -1,7 +1,9 @@
+import "./detail.css";
+
 import moment from "moment";
 
-import backArrowIcon from "../../img/back-arrow.svg";
-import playIcon from "../../img/play-icon.svg";
+import backArrowIcon from "../img/back-arrow.svg";
+import playIcon from "../img/play-icon.svg";
 import Trailer from "../components/trailer";
 import { getMovieDetail } from "../services/fetch";
 import { getBackgroundImageUrl } from "../services/image";
@@ -119,7 +121,9 @@ export default class Detail extends HTMLElement {
 
       const voteAvgBox = document.createElement("div");
       const voteAvgValue = document.createElement("div");
-      voteAvgValue.innerText = result.vote_average || "-";
+      voteAvgValue.innerText = result.vote_average
+        ? `${result.vote_average} / 10`
+        : "- / 10";
       voteAvgBox.appendChild(voteAvgValue);
       const voteAvgLabel = document.createElement("div");
       voteAvgLabel.innerText = "Vote Average";
@@ -148,3 +152,5 @@ export default class Detail extends HTMLElement {
       this.playButton.removeEventListener("click", this.showTrailer);
   }
 }
+
+customElements.define("detail-page", Detail);

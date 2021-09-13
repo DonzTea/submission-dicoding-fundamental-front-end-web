@@ -1,6 +1,8 @@
+import "./card.css";
+
 import { getYoutubeTrailerKey } from "../../services/fetch";
 import { setActivePage, setDetailPageAttribute } from "../../utils/route";
-import starIcon from "../../../img/star.svg";
+import starIcon from "../../img/star.svg";
 
 export default class Card extends HTMLElement {
   constructor() {
@@ -67,3 +69,5 @@ export default class Card extends HTMLElement {
     this.removeEventListener("click", this.openDetail);
   }
 }
+
+customElements.define("discover-card-component", Card);

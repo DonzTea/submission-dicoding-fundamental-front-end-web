@@ -1,3 +1,5 @@
+import "./trailer.css";
+
 export default class Trailer extends HTMLElement {
   constructor() {
     super();
@@ -39,3 +41,5 @@ export default class Trailer extends HTMLElement {
     trailer.setAttribute("youtube-trailer-key", youtubeTrailerKey);
   }
 }
+
+customElements.define("trailer-component", Trailer);

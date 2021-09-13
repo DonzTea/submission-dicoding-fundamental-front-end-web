@@ -134,6 +134,7 @@ detail-page > .rating-wrapper {
 
 detail-page > .rating-wrapper > div {
   flex-basis: 33%;
+  flex-grow: 1;
   text-align: center;
 
   display: flex;

@@ -1,3 +1,5 @@
+import "./discover.css";
+
 import { getNowPlayingMovies, searchMovies } from "../services/fetch";
 import { getPosterImageUrl } from "../services/image";
 
@@ -135,3 +137,5 @@ export default class Discover extends HTMLElement {
       this.searchInput.removeEventListener("input", this.onSearch);
   }
 }
+
+customElements.define("discover-page", Discover);

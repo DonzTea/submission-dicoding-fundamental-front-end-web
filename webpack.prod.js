@@ -25,8 +25,16 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
+      // component
       {
         test: /\.css$/i,
+        exclude: /styles/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      // global style
+      {
+        test: /\.css$/i,
+        include: /styles/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {

@@ -1,3 +1,5 @@
+import "./home.css";
+
 export default class Home extends HTMLElement {
   constructor() {
     super();
@@ -44,3 +46,5 @@ export default class Home extends HTMLElement {
 
   // disconnectedCallback() {}
 }
+
+customElements.define("home-page", Home);
