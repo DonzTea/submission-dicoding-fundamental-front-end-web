@@ -39,7 +39,7 @@ detail-page > .genre-list > li {
   border-image-slice: 1;
   border-width: 5px;
   border-image-source: linear-gradient(to left, #f75857, #ffa9a9);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 detail-page > .title {
@@ -88,7 +88,7 @@ detail-page > .overview {
 
   color: #e0e0e0;
 
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 detail-page > .button-wrapper {
@@ -129,7 +129,7 @@ detail-page > .rating-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 30px;
+  gap: 30px;
 }
 
 detail-page > .rating-wrapper > div {
@@ -157,7 +157,7 @@ detail-page > .rating-wrapper > div > div:nth-child(2) {
   }
 
   detail-page > .button-wrapper > .play-button {
-   flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
 
